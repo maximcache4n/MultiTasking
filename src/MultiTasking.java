@@ -156,7 +156,7 @@ public class MultiTasking {
                     shopCheckoutDisplay();
                     break;
                 case 8:
-                    System.out.println("Exiting program.");
+                    System.out.println("Exiting program...");
                     return;
                 default:
                     System.out.println("Invalid option. Please try again.");
