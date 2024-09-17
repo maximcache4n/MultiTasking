@@ -22,16 +22,39 @@ public class MultiTasking {
         System.out.print("Enter second number: ");
         double num2 = sc.nextDouble();
 
-        System.out.println("Addition: " + (num1 + num2));
-        System.out.println("Subtraction: " + (num1 - num2));
-        System.out.println("Multiplication: " + (num1 * num2));
-        if (num2 != 0) {
-            System.out.println("Division: " + (num1 / num2));
-        } else {
-            System.out.println("Division by zero is undefined.");
+        // Display the operation choices
+        System.out.println("Choose an operation:");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.print("Enter your choice (1-4): ");
+        int operation = sc.nextInt();
+
+        switch (operation) {
+            case 1:
+                System.out.println("Result (Addition): " + (num1 + num2));
+                break;
+            case 2:
+                System.out.println("Result (Subtraction): " + (num1 - num2));
+                break;
+            case 3:
+                System.out.println("Result (Multiplication): " + (num1 * num2));
+                break;
+            case 4:
+                if (num2 != 0) {
+                    System.out.println("Result (Division): " + (num1 / num2));
+                } else {
+                    System.out.println("Division by zero is undefined.");
+                }
+                break;
+            default:
+                System.out.println("Invalid operation choice.");
         }
+
         pause();
     }
+
 
     public static void areaOfCircle() {
         Scanner sc = new Scanner(System.in);
